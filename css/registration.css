@@ -1,0 +1,140 @@
+/* Gaya Utama Bagian */
+
+/* Gaya untuk elemen utama dengan background gradien dan margin bawah */
+main {
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    justify-content: center; /* Menyebarkan konten secara horizontal di tengah */
+    align-items: center; /* Menyebarkan konten secara vertikal di tengah */
+    min-height: calc(100vh - 80px - 40px); /* Mengurangi tinggi header dan footer dari tinggi viewport */
+    padding: 20px; /* Padding di dalam elemen utama */
+    background: linear-gradient(135deg, #FFC3A0 0%, #FFAFBD 100%); /* Gradien latar belakang */
+    margin-bottom: 40px; /* Margin bawah untuk jarak dengan elemen di bawahnya */
+}
+
+/* Gaya untuk kontainer pendaftaran yang memusatkan konten */
+.register-container {
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    justify-content: center; /* Menyebarkan konten secara horizontal di tengah */
+    align-items: center; /* Menyebarkan konten secara vertikal di tengah */
+    width: 100%; /* Lebar penuh dari kontainer induk */
+    max-width: 450px; /* Lebar maksimum kontainer */
+    padding: 20px; /* Padding di dalam kontainer */
+}
+
+/* Gaya untuk kotak pendaftaran */
+.register-box {
+    background-color: #FFF; /* Warna latar belakang kotak */
+    border-radius: 35px; /* Sudut melengkung pada kotak */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan kotak dengan transparansi */
+    padding: 30px; /* Padding di dalam kotak */
+    width: 100%; /* Lebar penuh dari kontainer induk */
+}
+
+/* Gaya untuk judul di dalam kotak pendaftaran */
+.register-box h2 {
+    font-size: 24px; /* Ukuran font judul */
+    color: #FF6584; /* Warna teks judul */
+    margin-bottom: 20px; /* Margin bawah untuk jarak dengan elemen di bawahnya */
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    font-family: 'Oleo Script', cursive; /* Font khusus untuk judul */
+}
+
+/* Gaya untuk grup input */
+.input-group {
+    margin-bottom: 15px; /* Margin bawah untuk jarak antara grup input */
+}
+
+/* Gaya untuk label dalam grup input */
+.input-group label {
+    display: block; /* Menampilkan label sebagai blok untuk memudahkan tata letak */
+    font-weight: 500; /* Berat font untuk label */
+    margin-bottom: 5px; /* Margin bawah untuk jarak dengan input */
+}
+
+/* Gaya untuk input dalam grup input */
+.input-group input {
+    width: 100%; /* Lebar penuh dari kontainer induk */
+    padding: 10px; /* Padding di dalam input */
+    border: 1px solid #ddd; /* Border input */
+    border-radius: 5px; /* Sudut melengkung pada input */
+    font-size: 16px; /* Ukuran font di dalam input */
+}
+
+/* Gaya untuk tombol */
+button {
+    width: 100%; /* Lebar penuh dari kontainer induk */
+    padding: 10px; /* Padding di dalam tombol */
+    background-color: #FF6584; /* Warna latar belakang tombol */
+    border: none; /* Menghilangkan border tombol */
+    border-radius: 5px; /* Sudut melengkung pada tombol */
+    color: #FFF; /* Warna teks tombol */
+    font-size: 16px; /* Ukuran font tombol */
+    cursor: pointer; /* Menampilkan kursor tangan saat hover */
+    transition: background-color 0.3s; /* Transisi halus saat mengubah warna latar belakang */
+}
+
+/* Gaya untuk link login */
+.login-link {
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    margin-top: 15px; /* Margin atas untuk jarak dengan elemen di atasnya */
+}
+
+/* Gaya untuk link login */
+.login-link a {
+    color: #FF6584; /* Warna teks link */
+    text-decoration: none; /* Menghilangkan garis bawah dari link */
+    font-weight: 500; /* Berat font untuk link */
+}
+
+/* Efek hover pada link login */
+.login-link a:hover {
+    text-decoration: underline; /* Menambahkan garis bawah saat hover */
+}
+
+/* Responsive Styles */
+
+/* Responsivitas untuk layar dengan lebar maksimum 1030px */
+@media (max-width: 1030px) {
+    main {
+        padding: 10px; /* Mengurangi padding untuk layar lebih kecil */
+    }
+
+    .register-box {
+        padding: 20px; /* Mengurangi padding di dalam kotak pendaftaran */
+    }
+
+    .register-box h2 {
+        font-size: 22px; /* Mengurangi ukuran font judul */
+    }
+
+    .input-group input {
+        font-size: 14px; /* Mengurangi ukuran font input */
+    }
+
+    button {
+        font-size: 14px; /* Mengurangi ukuran font tombol */
+    }
+}
+
+/* Responsivitas untuk layar dengan lebar maksimum 625px */
+@media (max-width: 625px) {
+    .register-container {
+        padding: 10px; /* Mengurangi padding di dalam kontainer pendaftaran */
+    }
+
+    .register-box {
+        padding: 15px; /* Mengurangi padding di dalam kotak pendaftaran */
+    }
+
+    .register-box h2 {
+        font-size: 18px; /* Mengurangi ukuran font judul */
+    }
+
+    .input-group input {
+        font-size: 12px; /* Mengurangi ukuran font input */
+    }
+
+    button {
+        font-size: 12px; /* Mengurangi ukuran font tombol */
+    }
+}

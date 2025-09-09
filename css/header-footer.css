@@ -1,0 +1,392 @@
+/* Gaya Global */
+
+/* Mengatur gaya dasar untuk semua elemen */
+* {
+    margin: 0; /* Menghapus margin default */
+    padding: 0; /* Menghapus padding default */
+    box-sizing: border-box; /* Menyertakan padding dan border dalam perhitungan lebar dan tinggi elemen */
+    text-decoration: none; /* Menghapus garis bawah dari semua elemen teks */
+}
+
+body {
+    background: linear-gradient(135deg, #FFC3A0 0%, #FFAFBD 100%); /* Gradien latar belakang dari #FFC3A0 ke #FFAFBD */
+    font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+    color: #333; /* Warna teks utama */
+}
+
+/* Gaya Header */
+
+/* Gaya untuk elemen header */
+header {
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    justify-content: space-between; /* Menyebarkan elemen secara merata */
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    padding: 20px 40px; /* Menambahkan padding */
+    background-color: #FFF; /* Latar belakang putih */
+    position: sticky; /* Menjaga header tetap berada di atas saat scrolling */
+    top: 0; /* Posisi tetap di bagian atas */
+    z-index: 1000; /* Menjaga header tetap di atas elemen lain */
+    margin-bottom: 30px; /* Menambahkan margin bawah */
+    box-shadow: 0 5px 4px #FF6584; /* Menambahkan bayangan kotak */
+}
+
+/* Gaya untuk kontainer kiri dalam header */
+.left {
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    gap: 20px; /* Jarak antara elemen */
+}
+
+/* Gaya untuk logo dalam header */
+.log {
+    width: 50px; /* Lebar logo */
+    height: 50px; /* Tinggi logo */
+}
+
+/* Gaya untuk judul dalam header */
+h1 {
+    font-family: 'Oleo Script', cursive; /* Menggunakan font Oleo Script */
+    color: #FF6584; /* Warna teks judul */
+    font-size: 24px; /* Ukuran font */
+}
+
+/* Gaya untuk elemen navigasi */
+nav {
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+}
+
+/* Gaya untuk tautan navigasi */
+.nav-links {
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    gap: 20px; /* Jarak antara tautan */
+}
+
+.nav-links li {
+    list-style: none; /* Menghapus bullet point dari daftar */
+}
+
+.nav-links li a {
+    color: #333; /* Warna teks tautan */
+    font-weight: 500; /* Menjadikan teks sedikit tebal */
+    font-size: 16px; /* Ukuran font tautan */
+    padding: 10px 20px; /* Menambahkan padding di sekitar tautan */
+    border-radius: 25px; /* Menambahkan sudut melengkung pada tautan */
+    transition: background-color 0.3s, color 0.3s; /* Menambahkan transisi untuk perubahan latar belakang dan warna */
+}
+
+/* Gaya khusus untuk tautan yang dipilih */
+.nav-links li a.tbl {
+    background-color: #FF6584; /* Warna latar belakang */
+    color: #FFF; /* Warna teks */
+}
+
+/* Gaya saat hover pada tautan navigasi */
+.nav-links li a:hover {
+    background-color: #FF9AA2; /* Warna latar belakang saat hover */
+    color: #FFF; /* Warna teks saat hover */
+}
+
+/* Gaya untuk kontainer kanan dalam header */
+.right {
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    gap: 20px; /* Jarak antara elemen */
+}
+
+/* Gaya untuk ikon dalam header */
+.kiri {
+    width: 25px; /* Lebar ikon */
+    height: 25px; /* Tinggi ikon */
+}
+
+/* Gaya untuk kotak pencarian */
+.search-box {
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    gap: 5px; /* Jarak antara elemen dalam kotak pencarian */
+    border-radius: 25px; /* Menambahkan sudut melengkung pada kotak pencarian */
+    background-color: #ffb7c4; /* Warna latar belakang kotak pencarian */
+    padding: 5px; /* Menambahkan padding di dalam kotak pencarian */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan kotak pencarian */
+}
+
+/* Gaya untuk input pencarian dalam kotak pencarian */
+.search-box input {
+    padding: 5px 10px; /* Menambahkan padding di dalam input */
+    border: none; /* Menghapus border */
+    border-radius: 25px; /* Menambahkan sudut melengkung pada input */
+    outline: none; /* Menghapus outline saat input aktif */
+}
+
+/* Gaya untuk tombol pencarian dalam kotak pencarian */
+.search-box button {
+    background-color: transparent; /* Menghapus latar belakang */
+    border: none; /* Menghapus border */
+    padding: 5px 10px; /* Menambahkan padding di sekitar tombol */
+    border-radius: 25px; /* Menambahkan sudut melengkung pada tombol */
+    cursor: pointer; /* Menampilkan kursor pointer saat hover */
+}
+
+/* Gaya untuk gambar dalam tombol pencarian */
+.search-box button img {
+    width: 16px; /* Lebar gambar */
+    height: 16px; /* Tinggi gambar */
+}
+
+/* Gaya Menu Hamburger */
+
+/* Gaya untuk tombol hamburger (menu navigasi responsif) */
+.hamburger {
+    display: none; /* Menyembunyikan tombol hamburger secara default */
+    background: none; /* Menghapus latar belakang */
+    border: none; /* Menghapus border */
+    cursor: pointer; /* Menampilkan kursor pointer saat hover */
+    padding: 0; /* Menghapus padding */
+    z-index: 2000; /* Menjaga tombol hamburger tetap di atas elemen lain */
+}
+
+/* Gaya untuk gambar dalam tombol hamburger */
+.hamburger img {
+    width: 30px; /* Lebar gambar */
+    height: 30px; /* Tinggi gambar */
+}
+
+/* Gaya Menu Navigasi Mobile */
+
+/* Gaya untuk menu navigasi mobile */
+.mobile-nav {
+    display: none; /* Menyembunyikan menu navigasi mobile secara default */
+    flex-direction: column; /* Menyusun elemen menu secara vertikal */
+    position: absolute; /* Posisi absolut di dalam kontainer induk */
+    top: 50px; /* Jarak dari bagian atas */
+    left: 0; /* Jarak dari sisi kiri */
+    background-color: #FFF; /* Latar belakang putih */
+    width: 100%; /* Lebar penuh dari kontainer induk */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan kotak */
+    z-index: 2000; /* Menjaga menu navigasi mobile tetap di atas elemen lain */
+    padding: 20px; /* Menambahkan padding di dalam menu */
+    transition: opacity 0.3s ease; /* Menambahkan transisi untuk perubahan opacity */
+}
+
+/* Gaya untuk daftar menu dalam navigasi mobile */
+.mobile-nav ul {
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    flex-direction: column; /* Menyusun elemen menu secara vertikal */
+    padding: 0; /* Menghapus padding */
+    margin: 0; /* Menghapus margin */
+    list-style: none; /* Menghapus bullet point dari daftar */
+}
+
+/* Gaya untuk item menu dalam navigasi mobile */
+.mobile-nav ul li {
+    margin: 15px 0; /* Menambahkan margin atas dan bawah */
+    text-align: center; /* Menyelaraskan teks ke tengah */
+}
+
+/* Gaya untuk tautan dalam menu navigasi mobile */
+.mobile-nav ul li a {
+    display: block; /* Menjadikan tautan sebagai blok */
+    padding: 10px; /* Menambahkan padding di sekitar tautan */
+    font-size: 18px; /* Ukuran font */
+    color: #333; /* Warna teks */
+    background-color: #ff9aa2; /* Warna latar belakang */
+    border-radius: 20px; /* Menambahkan sudut melengkung pada tautan */
+    transition: background-color 0.3s, color 0.3s; /* Menambahkan transisi untuk perubahan latar belakang dan warna */
+}
+
+/* Gaya saat hover pada tautan dalam menu navigasi mobile */
+.mobile-nav ul li a:hover {
+    background-color: #FF9AA2; /* Warna latar belakang saat hover */
+    color: #FFF; /* Warna teks saat hover */
+}
+
+/* Menampilkan menu navigasi mobile ketika aktif */
+.mobile-nav.active {
+    display: flex; /* Menampilkan menu navigasi mobile */
+    opacity: 1; /* Mengatur opacity */
+}
+
+/* Gaya Footer */
+
+/* Gaya untuk elemen footer */
+footer {
+    background-color: #FFF9F9; /* Warna latar belakang footer */
+    padding: 40px 20px; /* Menambahkan padding di dalam footer */
+    border-top: 5px solid #FF6584; /* Border atas dengan warna dan ketebalan tertentu */
+    border-radius: 10px; /* Menambahkan sudut melengkung pada footer */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan kotak */
+}
+
+/* Gaya untuk konten dalam footer */
+.footer-content {
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    justify-content: space-between; /* Menyebarkan elemen secara merata */
+    flex-wrap: wrap; /* Membungkus elemen dalam beberapa baris */
+    gap: 30px; /* Jarak antara elemen */
+    margin-bottom: 20px; /* Menambahkan margin bawah */
+}
+
+/* Gaya untuk setiap bagian dalam footer */
+.footer-section-about,
+.footer-section-links,
+.footer-section-social {
+    flex: 1; /* Mengatur fleksibilitas setiap bagian */
+    min-width: 250px; /* Lebar minimum */
+}
+
+/* Gaya untuk judul dalam setiap bagian footer */
+.footer-section-about h2,
+.footer-section-links h2,
+.footer-section-social h2 {
+    font-size: 18px; /* Ukuran font */
+    margin-bottom: 15px; /* Margin bawah */
+    color: #FF6584; /* Warna teks */
+    border-bottom: 2px solid #FF6584; /* Border bawah dengan warna dan ketebalan tertentu */
+    padding-bottom: 5px; /* Padding bawah */
+    text-transform: uppercase; /* Mengubah teks menjadi huruf kapital */
+    letter-spacing: 1px; /* Jarak antar huruf */
+}
+
+/* Gaya untuk paragraf dan daftar dalam footer */
+.footer-section-about p,
+.footer-section-links ul,
+.footer-section-social ul {
+    color: #ff6584; /* Warna teks */
+    font-size: 14px; /* Ukuran font */
+    line-height: 1.6; /* Jarak antar baris */
+}
+
+/* Gaya untuk paragraf di bagian tentang footer */
+.footer-section-about p {
+    text-align: justify; /* Menyelaraskan teks secara justify */
+}
+
+/* Gaya untuk daftar tautan dalam footer */
+.footer-section-links ul {
+    list-style: none; /* Menghapus bullet point dari daftar */
+    padding: 0; /* Menghapus padding */
+}
+
+/* Gaya untuk item dalam daftar tautan footer */
+.footer-section-links ul li {
+    margin-bottom: 10px; /* Margin bawah */
+}
+
+/* Gaya untuk tautan dalam daftar tautan footer */
+.footer-section-links ul li a {
+    color: #FF6584; /* Warna teks */
+    text-decoration: none; /* Menghapus garis bawah */
+    transition: color 0.3s; /* Menambahkan transisi untuk perubahan warna */
+    font-family: inherit; /* Menggunakan font dari induk */
+    font-size: 14px; /* Ukuran font */
+    line-height: 1.6; /* Jarak antar baris */
+}
+
+/* Gaya saat hover pada tautan dalam daftar tautan footer */
+.footer-section-links ul li a:hover {
+    color: #FF3C6A; /* Warna teks saat hover */
+}
+
+/* Gaya untuk daftar sosial media dalam footer */
+.footer-section-social ul {
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    gap: 15px; /* Jarak antara ikon sosial media */
+    list-style: none; /* Menghapus bullet point dari daftar */
+    padding: 0; /* Menghapus padding */
+}
+
+/* Gaya untuk gambar ikon sosial media dalam footer */
+.footer-section-social img {
+    width: 24px; /* Lebar gambar */
+    height: 24px; /* Tinggi gambar */
+    transition: transform 0.3s; /* Menambahkan transisi untuk perubahan transformasi */
+}
+
+/* Gaya saat hover pada gambar ikon sosial media */
+.footer-section-social img:hover {
+    transform: scale(1.2); /* Membesar ikon saat hover */
+}
+
+/* Gaya untuk bagian bawah footer */
+.footer-bottom {
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    padding-top: 20px; /* Menambahkan padding atas */
+    border-top: 1px solid #ddd; /* Border atas dengan warna abu-abu muda */
+}
+
+/* Gaya untuk teks di bagian bawah footer */
+.footer-bottom p {
+    color: #555; /* Warna teks */
+    font-size: 14px; /* Ukuran font */
+}
+
+/* Gaya untuk tautan di bagian bawah footer */
+.footer-bottom a {
+    color: #FF6584; /* Warna teks */
+    text-decoration: none; /* Menghapus garis bawah */
+    transition: color 0.3s; /* Menambahkan transisi untuk perubahan warna */
+}
+
+/* Gaya saat hover pada tautan di bagian bawah footer */
+.footer-bottom a:hover {
+    color: #FF3C6A; /* Warna teks saat hover */
+}
+
+/* Menyembunyikan logo dan teks Glow Up di layar kecil */
+
+/* Responsivitas untuk layar dengan lebar maksimum 1030px */
+@media (max-width: 1030px) {
+    .left .log,
+    .left h1 {
+        display: none; /* Menyembunyikan logo dan judul pada layar kecil */
+    }
+}
+
+/* Responsivitas Header dan Navigasi */
+
+/* Responsivitas untuk layar dengan lebar maksimum 1030px */
+@media (max-width: 1030px) {
+    header {
+        padding: 20px; /* Menambahkan padding pada header */
+        flex-direction: column; /* Menyusun elemen header secara vertikal */
+        align-items: flex-start; /* Menyelaraskan elemen ke kiri */
+    }
+
+    .left {
+        display: flex; /* Menampilkan elemen kiri sebagai flex */
+        justify-content: space-between; /* Menyebarkan elemen secara merata */
+    }
+
+    .right {
+        width: auto; /* Menyesuaikan lebar elemen kanan */
+    }
+
+    nav {
+        display: none; /* Menyembunyikan menu navigasi */
+    }
+
+    .hamburger {
+        display: block; /* Menampilkan tombol hamburger */
+    }
+}
+
+/* Responsivitas Footer */
+
+/* Responsivitas untuk layar dengan lebar maksimum 625px */
+@media (max-width: 625px) {
+    .footer-content {
+        flex-direction: column; /* Menyusun elemen footer secara vertikal */
+        align-items: center; /* Menyelaraskan elemen ke tengah */
+        text-align: center; /* Menyelaraskan teks ke tengah */
+    }
+
+    .footer-section {
+        margin-bottom: 20px; /* Menambahkan margin bawah */
+    }
+
+    .footer-section-social ul {
+        flex-direction: column; /* Menyusun elemen sosial media secara vertikal */
+        align-items: center; /* Menyelaraskan elemen ke tengah */
+    }
+}

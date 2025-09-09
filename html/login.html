@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Karakter set untuk dokumen -->
+    <meta charset="UTF-8">
+    <!-- Mengatur viewport untuk responsivitas di perangkat mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Judul halaman -->
+    <title>True Beauty</title>
+    <!-- Link ke stylesheet untuk header dan footer -->
+    <link rel="stylesheet" href="../css/header-footer.css">
+    <!-- Link ke stylesheet khusus untuk halaman login -->
+    <link rel="stylesheet" href="../css/login.css">
+    <!-- Link ke Google Fonts untuk font yang digunakan di halaman -->
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header halaman -->
+    <header>
+        <!-- Bagian kiri header dengan logo, judul, dan navigasi -->
+        <div class="left">
+            <!-- Logo Glow Up -->
+            <img src="../asset/logo.jpeg" alt="Logo Glow Up" class="log">
+            <h1>Glow Up Patimah</h1>
+            <!-- Navigasi utama -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="./index.html" class="tbl">Home</a></li>
+                    <li><a href="./product.html" class="tbl">Product</a></li>
+                    <li><a href="./news.html" class="tbl">News</a></li>
+                </ul>
+            </nav>
+            <!-- Tombol hamburger untuk menu mobile -->
+            <button class="hamburger">
+                <img src="../asset/menu.png" alt="Menu">
+            </button>
+        </div>
+        <!-- Bagian kanan header dengan kotak pencarian dan link login/registrasi -->
+        <div class="right">
+            <!-- Kotak pencarian -->
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button><img src="../asset/search.png" alt="Search"></button>
+            </div>
+            <!-- Link ke halaman registrasi/login -->
+            <a href="registrasi.html">
+                <img src="../asset/user.png" alt="Login/Registrasi" class="kiri" title="Login/Registrasi">
+            </a>
+        </div>
+    </header>
+
+    <!-- Navigasi mobile yang muncul ketika menu hamburger diklik -->
+    <div class="mobile-nav">
+        <ul>
+            <li><a href="./index.html" class="tbl">Home</a></li>
+            <li><a href="./product.html" class="tbl">Product</a></li>
+            <li><a href="./news.html" class="tbl">News</a></li>
+        </ul>
+    </div>
+
+    <!-- Bagian utama halaman untuk login -->
+    <main>
+        <div class="login-container">
+            <div class="login-box">
+                <h2>Login</h2>
+                <!-- Formulir login -->
+                <form action="product.html" method="get">
+                    <!-- Kelompok input untuk email -->
+                    <div class="input-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <!-- Kelompok input untuk password -->
+                    <div class="input-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <!-- Tombol kirim untuk login -->
+                    <button type="submit">Login</button>
+                </form>
+                <!-- Tautan untuk mendaftar jika belum memiliki akun -->
+                <p class="signup-link">Don't have an account? <a href="registrasi.html">Sign Up</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer halaman -->
+    <footer>
+        <div class="footer-content">
+            <!-- Bagian tentang kami di footer -->
+            <div class="footer-section-about">
+                <h2>About Us</h2>
+                <p>Glow Up is your go-to destination for all things beauty and skincare. Our mission is to provide high-quality, natural products that enhance your beauty and promote self-confidence. We believe in the power of nature and the importance of self-care. Join us on our journey to discover the best in beauty.</p>
+            </div>
+            <!-- Bagian tautan cepat di footer -->
+            <div class="footer-section-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./product.html">Product</a></li>
+                    <li><a href="./news.html">News</a></li>
+                </ul>
+            </div>
+            <!-- Bagian media sosial di footer -->
+            <div class="footer-section-social">
+                <h2>Follow Us</h2>
+                <ul>
+                    <li><a href="https://www.facebook.com/"><img class="gbr" src="../asset/fb.png" alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/accounts/login/?"><img class="gbr" src="../asset/ig.png" alt="Instagram"></a></li>
+                    <li><a href="https://twitter.com/"><img class="gbr" src="../asset/tweet.png" alt="Twitter"></a></li>
+                    <li><a href="https://web.whatsapp.com/"><img class="gbr" src="../asset/wa.png" alt="WhatsApp"></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Bagian bawah footer dengan hak cipta -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Glow Up. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript untuk header -->
+    <script src="../js/header.js"></script>
+
+</body>
+
+</html>

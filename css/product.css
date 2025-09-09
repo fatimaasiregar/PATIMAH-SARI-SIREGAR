@@ -1,0 +1,227 @@
+/* Base Styles */
+
+/* Gaya untuk teks utama dengan efek gradien dan animasi */
+.teks {
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    margin: 30px auto; /* Margin atas dan bawah, auto di kiri dan kanan untuk pusatkan */
+    font-size: 32px; /* Ukuran font teks utama */
+    font-weight: bold; /* Menjadikan teks lebih tebal */
+    background: linear-gradient(135deg, #FFC3A0 0%, #FFAFBD 100%); /* Gradien latar belakang untuk efek warna */
+    -webkit-background-clip: text; /* Memotong latar belakang pada teks */
+    -webkit-text-fill-color: transparent; /* Mengisi warna teks dengan transparan untuk efek gradien */
+    animation: animate 10s linear infinite; /* Menambahkan animasi untuk latar belakang gradien */
+}
+
+/* Keyframes untuk animasi gradien */
+@keyframes animate {
+    to {
+        background-position: 400%; /* Memindahkan posisi latar belakang gradien untuk animasi */
+    }
+}
+
+/* Gaya untuk kontainer kotak produk */
+#box {
+    padding: 20px; /* Padding di sekitar konten kontainer */
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    justify-content: center; /* Menyebarkan konten secara horizontal di tengah */
+}
+
+/* Gaya untuk tata letak grid produk */
+.tam {
+    display: grid; /* Menggunakan Grid Layout untuk tata letak */
+    grid-template-columns: repeat(5, 1fr); /* Lima kotak per baris */
+    gap: 30px; /* Jarak antara kotak */
+}
+
+/* Gaya untuk kotak keranjang */
+.cart {
+    display: flex; /* Menggunakan Flexbox untuk tata letak internal */
+    flex-direction: column; /* Mengatur item di dalam kolom */
+    align-items: center; /* Menyelaraskan item secara horizontal di tengah */
+    width: 240px; /* Lebar tetap kotak */
+    background-color: #f1377e3d; /* Warna latar belakang kotak dengan transparansi */
+    border-radius: 30px; /* Menambahkan sudut melengkung pada kotak */
+    border: 10px solid white; /* Menambahkan border putih pada kotak */
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    box-shadow: 8px 5px 7px 7px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan kotak */
+    padding: 15px; /* Padding di dalam kotak */
+    transition: transform 0.3s, box-shadow 0.3s; /* Menambahkan transisi untuk efek hover */
+}
+
+/* Efek hover pada kotak keranjang */
+.cart:hover {
+    transform: translateY(-10px); /* Menggeser kotak ke atas saat hover */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan lebih besar saat hover */
+}
+
+/* Gaya untuk gambar di dalam kotak keranjang */
+.gg {
+    width: 100%; /* Lebar penuh dari kontainer induk */
+    height: 200px; /* Tinggi tetap gambar */
+    object-fit: cover; /* Memastikan gambar menutupi area tanpa terdistorsi */
+    border-radius: 10px; /* Menambahkan sudut melengkung pada gambar */
+}
+
+/* Gaya untuk elemen harga dan judul di dalam kotak keranjang */
+.price, .title {
+    margin-top: 10px; /* Margin atas untuk jarak */
+    font-size: 16px; /* Ukuran font harga dan judul */
+    font-weight: 500; /* Menjadikan font sedikit tebal */
+}
+
+/* Gaya khusus untuk harga */
+.price {
+    color: #555; /* Warna teks harga */
+}
+
+/* Gaya khusus untuk judul */
+.title {
+    color: #555; /* Warna teks judul */
+}
+
+/* Gaya untuk deskripsi dengan teks yang rata kiri dan kanan */
+.des {
+    text-align: justify; /* Menyelaraskan teks secara justify */
+}
+
+/* Responsive Styles */
+
+/* Responsivitas untuk layar dengan lebar maksimum 1336px */
+@media (max-width: 1336px) {
+    .teks {
+        font-size: 28px; /* Ukuran font teks utama pada layar lebih kecil */
+    }
+    
+    .tam {
+        grid-template-columns: repeat(3, 1fr); /* Tiga kotak per baris */
+        gap: 25px; /* Jarak antara kotak */
+    }
+
+    .cart {
+        width: 200px; /* Lebar kotak lebih kecil pada layar lebih kecil */
+        padding: 10px; /* Padding lebih kecil pada layar lebih kecil */
+    }
+
+    .gg {
+        height: 180px; /* Tinggi gambar lebih kecil pada layar lebih kecil */
+    }
+
+    .price, .title {
+        font-size: 14px; /* Ukuran font harga dan judul lebih kecil pada layar lebih kecil */
+    }
+}
+
+/* Responsivitas untuk layar dengan lebar maksimum 1030px */
+@media (max-width: 1030px) {
+    .teks {
+        font-size: 24px; /* Ukuran font teks utama pada layar lebih kecil */
+    }
+
+    .tam {
+        grid-template-columns: repeat(3, 1fr); /* Tiga kotak per baris */
+        gap: 20px; /* Jarak antara kotak */
+    }
+
+    .cart {
+        width: 180px; /* Lebar kotak lebih kecil pada layar lebih kecil */
+        padding: 10px; /* Padding lebih kecil pada layar lebih kecil */
+    }
+
+    .gg {
+        height: 160px; /* Tinggi gambar lebih kecil pada layar lebih kecil */
+    }
+
+    .price, .title {
+        font-size: 12px; /* Ukuran font harga dan judul lebih kecil pada layar lebih kecil */
+    }
+}
+
+/* Responsivitas untuk layar dengan lebar maksimum 769px */
+@media (max-width: 769px) {
+    .teks {
+        font-size: 22px; /* Ukuran font teks utama pada layar lebih kecil */
+    }
+
+    .tam {
+        grid-template-columns: repeat(2, 1fr); /* Dua kotak per baris */
+        gap: 15px; /* Jarak antara kotak */
+    }
+
+    .cart {
+        width: 160px; /* Lebar kotak lebih kecil pada layar lebih kecil */
+        padding: 8px; /* Padding lebih kecil pada layar lebih kecil */
+    }
+
+    .gg {
+        height: 140px; /* Tinggi gambar lebih kecil pada layar lebih kecil */
+    }
+
+    .price, .title {
+        font-size: 11px; /* Ukuran font harga dan judul lebih kecil pada layar lebih kecil */
+    }
+}
+
+/* Responsivitas untuk layar dengan lebar maksimum 625px */
+@media (max-width: 625px) {
+    .tam {
+        grid-template-columns: repeat(2, 1fr); /* Dua kotak per baris */
+        gap: 10px; /* Jarak antara kotak */
+    }
+
+    .cart {
+        width: 140px; /* Lebar kotak lebih kecil pada layar lebih kecil */
+        padding: 6px; /* Padding lebih kecil pada layar lebih kecil */
+    }
+
+    .gg {
+        height: 120px; /* Tinggi gambar lebih kecil pada layar lebih kecil */
+    }
+
+    .price, .title {
+        font-size: 10px; /* Ukuran font harga dan judul lebih kecil pada layar lebih kecil */
+    }
+}
+
+/* Responsivitas untuk layar dengan lebar maksimum 530px */
+@media (max-width: 530px) {
+    .tam {
+        grid-template-columns: repeat(2, 1fr); /* Dua kotak per baris */
+    }
+
+    .cart {
+        width: 120px; /* Lebar kotak lebih kecil pada layar sangat kecil */
+        padding: 5px; /* Padding lebih kecil pada layar sangat kecil */
+    }
+
+    .gg {
+        height: 100px; /* Tinggi gambar lebih kecil pada layar sangat kecil */
+    }
+
+    .price, .title {
+        font-size: 9px; /* Ukuran font harga dan judul lebih kecil pada layar sangat kecil */
+    }
+}
+
+/* Responsivitas untuk layar dengan lebar maksimum 426px */
+@media (max-width: 426px) {
+    .teks {
+        font-size: 20px; /* Ukuran font teks utama pada layar sangat kecil */
+    }
+
+    .tam {
+        grid-template-columns: repeat(2, 1fr); /* Dua kotak per baris */
+    }
+
+    .cart {
+        width: 100px; /* Lebar kotak lebih kecil pada layar sangat kecil */
+        padding: 5px; /* Padding lebih kecil pada layar sangat kecil */
+    }
+
+    .gg {
+        height: 80px; /* Tinggi gambar lebih kecil pada layar sangat kecil */
+    }
+
+    .price, .title {
+        font-size: 8px; /* Ukuran font harga dan judul lebih kecil pada layar sangat kecil */
+    }
+}

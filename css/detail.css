@@ -1,0 +1,192 @@
+/* Gaya Dasar */
+
+/* Gaya untuk elemen dengan kelas 'teks' */
+.teks {
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    margin: 30px auto; /* Menambahkan margin atas dan bawah 30px, dan margin kiri dan kanan otomatis untuk pemusatan */
+    font-size: 32px; /* Ukuran font */
+    font-weight: bold; /* Menjadikan teks tebal */
+    background: linear-gradient(135deg, #FFC3A0 0%, #FFAFBD 100%); /* Gradien latar belakang dari #FFC3A0 ke #FFAFBD dengan sudut 135 derajat */
+    -webkit-background-clip: text; /* Menerapkan gradien latar belakang hanya pada teks (sifat WebKit) */
+    -webkit-text-fill-color: transparent; /* Mengatur warna teks menjadi transparan untuk gradien latar belakang */
+    animation: animate 10s linear infinite; /* Menambahkan animasi gradien latar belakang yang bergerak */
+}
+
+/* Definisi animasi gradien */
+@keyframes animate {
+    to {
+        background-position: 400%; /* Mengubah posisi latar belakang gradien untuk animasi */
+    }
+}
+
+/* Gaya untuk elemen dengan ID 'box' */
+#box {
+    padding: 20px; /* Menambahkan padding 20px di semua sisi */
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    justify-content: center; /* Memusatkan konten secara horizontal */
+}
+
+/* Gaya untuk elemen dengan kelas 'tam' */
+.tam {
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    flex-direction: column; /* Menyusun elemen anak secara vertikal */
+    align-items: center; /* Memusatkan elemen anak secara horizontal */
+    width: 100%; /* Lebar penuh dari kontainer induk */
+    padding: 20px; /* Menambahkan padding 20px di semua sisi */
+}
+
+/* Gaya untuk elemen dengan kelas 'cart' */
+.cart {
+    max-width: 40%; /* Lebar maksimum 40% dari kontainer induk */
+    border: 2px solid #fff; /* Garis batas putih dengan ketebalan 2px */
+    border-radius: 20px; /* Menambahkan sudut melengkung pada batas */
+    background-color: #fff; /* Latar belakang putih */
+    box-shadow: 8px 7px 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan kotak */
+    padding: 35px; /* Menambahkan padding 35px di semua sisi */
+    box-sizing: border-box; /* Menyertakan padding dan batas dalam perhitungan lebar dan tinggi */
+    color: #ff7b93f7; /* Warna teks */
+    text-align: left; /* Menyelaraskan teks ke kiri */
+    margin: 20px auto; /* Menambahkan margin atas dan bawah 20px, dan margin kiri dan kanan otomatis untuk pemusatan */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan efek transisi untuk transformasi dan bayangan kotak */
+    height: 100%; /* Mengatur tinggi 100% dari kontainer induk */
+    font-size: kecil; /* Ukuran font tidak valid, harus diganti dengan ukuran yang benar */
+}
+
+/* Efek saat hover pada elemen dengan kelas 'cart' */
+.cart:hover {
+    transform: translateY(-10px); /* Menggeser elemen 10px ke atas */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan kotak yang lebih besar */
+}
+
+/* Gaya untuk kontainer gambar dengan kelas 'gg-container' */
+.gg-container {
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    justify-content: center; /* Memusatkan konten secara horizontal */
+    margin-bottom: 30px; /* Menambahkan margin bawah 30px */
+}
+
+/* Gaya untuk gambar produk dengan kelas 'gg' */
+.gg {
+    width: 50%; /* Lebar gambar 50% dari kontainer induk */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+    border-radius: 10px; /* Menambahkan sudut melengkung pada gambar */
+}
+
+/* Gaya untuk elemen dengan kelas 'price' dan 'category' */
+.price,
+.category {
+    margin-top: 20px; /* Menambahkan margin atas 20px */
+    font-size: 18px; /* Ukuran font */
+    font-weight: 600; /* Menjadikan teks tebal */
+    margin: 20px; /* Menambahkan margin 20px di semua sisi */
+}
+
+/* Gaya khusus untuk elemen dengan kelas 'price' */
+.price {
+    color: #FF6584; /* Warna teks harga */
+}
+
+/* Gaya khusus untuk elemen dengan kelas 'title' */
+.title {
+    font-size: xx-large; /* Ukuran font tidak valid, harus diganti dengan ukuran yang benar */
+    text-transform: uppercase; /* Mengubah teks menjadi huruf kapital semua */
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    margin-top: 20px; /* Menambahkan margin atas 20px */
+    font-weight: 600; /* Menjadikan teks tebal */
+    margin: 20px; /* Menambahkan margin 20px di semua sisi */
+}
+
+/* Gaya khusus untuk elemen dengan kelas 'category' */
+.category {
+    font-size: 20px; /* Ukuran font */
+    font-weight: 700; /* Menjadikan teks lebih tebal */
+    color: #FF6584; /* Warna teks kategori */
+}
+
+/* Gaya untuk elemen dengan kelas 'des' */
+.des {
+    text-align: justify; /* Menyelaraskan teks secara justify */
+}
+
+/* Gaya Responsif */
+
+/* Gaya untuk layar dengan lebar maksimum 1030px */
+@media (max-width: 1030px) {
+    .teks {
+        font-size: 24px; /* Mengurangi ukuran font untuk layar kecil */
+    }
+
+    .cart {
+        max-width: 90%; /* Mengatur lebar maksimum menjadi 90% */
+        padding: 20px; /* Mengurangi padding */
+    }
+
+    .gg {
+        width: 50%; /* Mengatur lebar gambar menjadi 50% */
+    }
+}
+
+/* Gaya untuk layar dengan lebar maksimum 625px */
+@media (max-width: 625px) {
+    .teks {
+        font-size: 20px; /* Mengurangi ukuran font */
+    }
+
+    .cart {
+        max-width: 100%; /* Mengatur lebar maksimum menjadi 100% */
+        padding: 15px; /* Mengurangi padding */
+    }
+
+    .price,
+    .category {
+        font-size: 16px; /* Mengurangi ukuran font */
+    }
+
+    .title {
+        font-size: xx-large; /* Ukuran font tidak valid, harus diganti dengan ukuran yang benar */
+    }
+
+    .gg-container {
+        margin-bottom: 20px; /* Mengurangi margin bawah */
+    }
+
+    .gg {
+        width: 50%; /* Mengatur lebar gambar menjadi 50% */
+    }
+}
+
+/* Gaya untuk layar dengan lebar maksimum 530px */
+@media (max-width: 530px) {
+    .cart {
+        padding: 10px; /* Mengurangi padding */
+    }
+
+    .price,
+    .category {
+        font-size: 14px; /* Mengurangi ukuran font */
+    }
+
+    .title {
+        font-size: xx-large; /* Ukuran font tidak valid, harus diganti dengan ukuran yang benar */
+    }
+}
+
+/* Gaya untuk layar dengan lebar maksimum 426px */
+@media (max-width: 426px) {
+    .teks {
+        font-size: 18px; /* Mengurangi ukuran font */
+    }
+
+    .cart {
+        padding: 5px; /* Mengurangi padding */
+    }
+
+    .price,
+    .category {
+        font-size: 12px; /* Mengurangi ukuran font */
+    }
+
+    .title {
+        font-size: xx-large; /* Ukuran font tidak valid, harus diganti dengan ukuran yang benar */
+    }
+}

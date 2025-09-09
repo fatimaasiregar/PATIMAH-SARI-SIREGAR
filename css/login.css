@@ -1,0 +1,139 @@
+/* Gaya Dasar */
+
+/* Gaya untuk elemen main, menempatkannya di tengah halaman dengan jarak dari header dan footer */
+main {
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    justify-content: center; /* Menyebarkan konten secara horizontal di tengah */
+    align-items: center; /* Menyelaraskan konten secara vertikal di tengah */
+    min-height: calc(100vh - 60px - 40px); /* Mengurangi tinggi viewport dengan tinggi header dan footer */
+    padding: 20px; /* Padding tambahan di sekitar elemen main */
+    margin-bottom: 40px; /* Menambahkan margin bawah */
+}
+
+/* Gaya untuk kontainer login, memastikan konten terpusat */
+.login-container {
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    justify-content: center; /* Menyebarkan konten secara horizontal di tengah */
+    align-items: center; /* Menyelaraskan konten secara vertikal di tengah */
+    width: 100%; /* Lebar penuh dari kontainer induk */
+    max-width: 400px; /* Lebar maksimum kontainer */
+    padding: 20px; /* Padding tambahan untuk jarak yang lebih baik */
+}
+
+/* Gaya untuk kotak login */
+.login-box {
+    background-color: #FFF; /* Warna latar belakang putih */
+    border-radius: 35px; /* Menambahkan sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan kotak */
+    padding: 30px; /* Padding di dalam kotak login */
+    width: 100%; /* Lebar penuh dari kontainer induk */
+    max-width: 400px; /* Lebar maksimum kotak login */
+}
+
+/* Gaya untuk judul dalam kotak login */
+.login-box h2 {
+    font-size: 24px; /* Ukuran font judul */
+    color: #FF6584; /* Warna teks judul */
+    margin-bottom: 20px; /* Margin bawah judul */
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    font-family: 'Oleo Script', cursive; /* Menggunakan font Oleo Script */
+}
+
+/* Gaya untuk grup input di dalam kotak login */
+.input-group {
+    margin-bottom: 15px; /* Margin bawah antara grup input */
+}
+
+/* Gaya untuk label dalam grup input */
+.input-group label {
+    display: block; /* Menampilkan label sebagai blok */
+    font-weight: 500; /* Menjadikan font sedikit tebal */
+    margin-bottom: 5px; /* Margin bawah label */
+}
+
+/* Gaya untuk input di dalam grup input */
+.input-group input {
+    width: 100%; /* Lebar penuh dari kontainer induk */
+    padding: 10px; /* Padding di dalam input */
+    border: 1px solid #ddd; /* Border abu-abu muda */
+    border-radius: 5px; /* Menambahkan sudut melengkung pada input */
+    font-size: 16px; /* Ukuran font dalam input */
+}
+
+/* Gaya untuk tombol di dalam kotak login */
+button {
+    width: 100%; /* Lebar penuh dari kontainer induk */
+    padding: 10px; /* Padding di dalam tombol */
+    background-color: #FF6584; /* Warna latar belakang tombol */
+    border: none; /* Menghapus border */
+    border-radius: 5px; /* Menambahkan sudut melengkung pada tombol */
+    color: #FFF; /* Warna teks tombol */
+    font-size: 16px; /* Ukuran font dalam tombol */
+    cursor: pointer; /* Menampilkan kursor pointer saat hover */
+    transition: background-color 0.3s; /* Menambahkan transisi untuk perubahan warna latar belakang */
+}
+
+/* Gaya untuk tautan lupa kata sandi dan tautan daftar */
+.forgot-password,
+.signup-link {
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    margin-top: 15px; /* Margin atas untuk jarak */
+}
+
+/* Gaya untuk tautan lupa kata sandi dan tautan daftar */
+.forgot-password a,
+.signup-link a {
+    color: #FF6584; /* Warna teks tautan */
+    text-decoration: none; /* Menghapus garis bawah dari tautan */
+    font-weight: 500; /* Menjadikan font sedikit tebal */
+}
+
+/* Gaya saat hover pada tautan lupa kata sandi dan tautan daftar */
+.forgot-password a:hover,
+.signup-link a:hover {
+    text-decoration: underline; /* Menambahkan garis bawah pada tautan saat hover */
+}
+
+/* Gaya Responsif */
+
+/* Responsivitas untuk layar dengan lebar maksimum 1030px */
+@media (max-width: 1030px) {
+    .login-box {
+        padding: 20px; /* Sesuaikan padding untuk layar lebih kecil */
+    }
+
+    .login-box h2 {
+        font-size: 20px; /* Menyesuaikan ukuran font judul */
+    }
+
+    .input-group input {
+        font-size: 14px; /* Menyesuaikan ukuran font dalam input */
+    }
+
+    button {
+        font-size: 14px; /* Menyesuaikan ukuran font tombol */
+    }
+}
+
+/* Responsivitas untuk layar dengan lebar maksimum 625px */
+@media (max-width: 625px) {
+    .login-container {
+        padding: 10px; /* Sesuaikan padding untuk layar sangat kecil */
+    }
+
+    .login-box {
+        padding: 15px; /* Menyesuaikan padding kotak login */
+    }
+
+    .login-box h2 {
+        font-size: 18px; /* Menyesuaikan ukuran font judul */
+    }
+
+    .input-group input {
+        font-size: 12px; /* Menyesuaikan ukuran font dalam input */
+    }
+
+    button {
+        font-size: 12px; /* Menyesuaikan ukuran font tombol */
+    }
+}

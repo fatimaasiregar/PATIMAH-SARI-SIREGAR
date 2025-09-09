@@ -1,0 +1,259 @@
+/* Slider */
+#slider {
+    position: relative; /* Menetapkan posisi relatif untuk pengaturan posisi anak elemen */
+    width: 100%; /* Lebar slider 100% dari elemen induk */
+    height: 600px; /* Tinggi slider tetap */
+    overflow: hidden; /* Menyembunyikan elemen yang berada di luar batas slider */
+}
+
+#slider .slides {
+    display: flex; /* Menyusun slide secara horizontal */
+    animation: slide 20s infinite; /* Menerapkan animasi untuk slider */
+}
+
+#slider .slide {
+    flex-shrink: 0; /* Menghindari slide menyusut */
+}
+
+#slider .slide img {
+    width: 100%; /* Lebar gambar 100% dari elemen slide */
+    object-fit: cover; /* Mengatur gambar untuk menutupi elemen tanpa mengubah rasio */
+}
+
+@keyframes slide {
+    0% { transform: translateX(0%); } /* Posisi awal */
+    20% { transform: translateX(-20%); } /* Pindah ke kiri 20% */
+    40% { transform: translateX(-40%); } /* Pindah ke kiri 40% */
+    60% { transform: translateX(-60%); } /* Pindah ke kiri 60% */
+    80% { transform: translateX(-80%); } /* Pindah ke kiri 80% */
+    100% { transform: translateX(0%); } /* Kembali ke posisi awal */
+}
+
+/* Products Section */
+#products {
+    padding: 50px 0; /* Jarak atas dan bawah dari elemen produk */
+    text-align: center; /* Menyusun teks ke tengah */
+}
+
+#products h2 {
+    font-size: 36px; /* Ukuran font untuk judul produk */
+    font-family: 'Oleo Script', cursive; /* Font khusus untuk judul produk */
+    margin-bottom: 20px; /* Jarak bawah dari judul */
+    color: #FF6584; /* Warna teks judul */
+}
+
+.tam {
+    display: grid; /* Menyusun produk dalam grid */
+    grid-template-columns: repeat(4, 1fr); /* 4 kolom dengan lebar sama */
+    gap: 20px; /* Jarak antar elemen grid */
+    padding: 0 20px; /* Jarak kiri dan kanan */
+}
+
+.cart {
+    background: #fff; /* Warna latar belakang kotak produk */
+    padding: 15px; /* Jarak dalam kotak produk */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Bayangan kotak produk */
+    border-radius: 15px; /* Sudut membulat untuk kotak produk */
+    transition: transform 0.3s; /* Transisi perubahan skala */
+    display: flex; /* Menyusun elemen dalam kotak produk secara fleksibel */
+    flex-direction: column; /* Menyusun elemen secara vertikal */
+    align-items: center; /* Menyusun elemen secara horizontal ke tengah */
+    height: 100%; /* Tinggi kotak produk 100% dari elemen induk */
+}
+
+.cart:hover {
+    transform: scale(1.05); /* Memperbesar kotak produk saat hover */
+}
+
+.cart img {
+    width: 100%; /* Lebar gambar 100% dari kotak produk */
+    height: 200px; /* Tinggi tetap untuk gambar */
+    object-fit: contain; /* Menjaga rasio gambar */
+    border-bottom: 1px solid #eee; /* Garis batas bawah gambar */
+    margin-bottom: 15px; /* Jarak bawah gambar */
+}
+
+.cart .category {
+    font-size: 16px; /* Ukuran font untuk kategori */
+    font-weight: bold; /* Menebalkan font kategori */
+    color: #FFF; /* Warna teks kategori */
+    background-color: #FF6584; /* Warna latar belakang kategori */
+    padding: 8px; /* Jarak dalam kategori */
+    border-radius: 10px; /* Sudut membulat untuk kategori */
+    display: flex; /* Menyusun kategori secara fleksibel */
+    justify-content: center; /* Menyusun kategori secara horizontal ke tengah */
+    align-items: center; /* Menyusun kategori secara vertikal ke tengah */
+    width: 80%; /* Lebar kategori */
+    box-sizing: border-box; /* Menghitung padding dalam lebar kategori */
+    margin-bottom: 10px; /* Jarak bawah kategori */
+}
+
+.cart .title {
+    font-size: 16px; /* Ukuran font untuk nama produk */
+    font-weight: bold; /* Menebalkan font nama produk */
+    margin-bottom: 10px; /* Jarak bawah nama produk */
+    color: #FF6584; /* Warna teks nama produk */
+    text-align: center; /* Menyusun teks nama produk ke tengah */
+}
+
+.cart .price {
+    font-size: 18px; /* Ukuran font untuk harga produk */
+    color: #333; /* Warna teks harga produk */
+    text-align: center; /* Menyusun teks harga produk ke tengah */
+}
+
+/* Quotes Section */
+#quotes {
+    background: #FFEFF1; /* Warna latar belakang section kutipan */
+    padding: 50px 20px; /* Jarak atas, bawah, kiri, dan kanan dari section kutipan */
+    text-align: center; /* Menyusun teks ke tengah */
+    display: flex; /* Menyusun elemen kutipan secara fleksibel */
+    justify-content: space-around; /* Menyusun elemen kutipan dengan jarak sama */
+}
+
+#quotes .quote {
+    max-width: 30%; /* Lebar maksimum elemen kutipan */
+    background: #fff; /* Warna latar belakang kutipan */
+    padding: 20px; /* Jarak dalam kutipan */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Bayangan kutipan */
+    border-radius: 20px; /* Sudut membulat untuk kutipan */
+}
+
+#quotes .quote h4 {
+    color: #FF6584; /* Warna teks untuk subjudul kutipan */
+    margin-top: 10px; /* Jarak atas dari subjudul kutipan */
+}
+
+/* Responsive Styles */
+@media (max-width: 1336px) {
+    #products h2 {
+        font-size: 32px; /* Ukuran font judul produk untuk layar lebih kecil */
+    }
+
+    .tam {
+        grid-template-columns: repeat(3, 1fr); /* 3 kolom dengan lebar sama */
+        gap: 20px; /* Jarak antar elemen grid */
+    }
+
+    #quotes .quote {
+        max-width: 45%; /* Lebar maksimum kutipan */
+    }
+}
+
+@media (max-width: 1030px) {
+    #products h2 {
+        font-size: 28px; /* Ukuran font judul produk untuk layar lebih kecil */
+    }
+
+    .tam {
+        grid-template-columns: repeat(3, 1fr); /* 3 kolom dengan lebar sama */
+        gap: 20px; /* Jarak antar elemen grid */
+    }
+
+    .cart {
+        padding: 15px; /* Jarak dalam kotak produk */
+    }
+
+    .cart .category, .cart .title, .cart .price {
+        font-size: 14px; /* Ukuran font untuk kategori, nama produk, dan harga */
+    }
+
+    #quotes {
+        flex-direction: column; /* Menyusun kutipan secara vertikal */
+        align-items: center; /* Menyusun kutipan secara horizontal ke tengah */
+    }
+
+    #quotes .quote {
+        max-width: 80%; /* Lebar maksimum kutipan */
+        margin-bottom: 20px; /* Jarak bawah kutipan */
+    }
+}
+
+@media (max-width: 769px) {
+    #products h2 {
+        font-size: 24px; /* Ukuran font judul produk untuk layar lebih kecil */
+    }
+
+    .tam {
+        gap: 15px; /* Jarak antar elemen grid */
+        padding: 0 15px; /* Jarak kiri dan kanan */
+    }
+
+    .cart {
+        padding: 15px; /* Jarak dalam kotak produk */
+    }
+
+    .cart .category, .cart .title, .cart .price {
+        font-size: 12px; /* Ukuran font untuk kategori, nama produk, dan harga */
+    }
+
+    .cart img {
+        height: 180px; /* Tinggi gambar untuk layar lebih kecil */
+    }
+}
+
+@media (max-width: 625px) {
+    #slider {
+        height: 400px; /* Tinggi slider untuk layar lebih kecil */
+    }
+
+    #products h2 {
+        font-size: 22px; /* Ukuran font judul produk untuk layar lebih kecil */
+    }
+
+    .cart {
+        padding: 10px; /* Jarak dalam kotak produk */
+    }
+
+    .cart .category, .cart .title, .cart .price {
+        font-size: 11px; /* Ukuran font untuk kategori, nama produk, dan harga */
+    }
+
+    .cart img {
+        height: 160px; /* Tinggi gambar untuk layar lebih kecil */
+    }
+}
+
+@media (max-width: 530px) {
+    #slider {
+        height: 350px; /* Tinggi slider untuk layar lebih kecil */
+    }
+
+    #products h2 {
+        font-size: 20px; /* Ukuran font judul produk untuk layar lebih kecil */
+    }
+
+    .cart {
+        padding: 8px; /* Jarak dalam kotak produk */
+    }
+
+    .cart .category, .cart .title, .cart .price {
+        font-size: 10px; /* Ukuran font untuk kategori, nama produk, dan harga */
+    }
+
+    .cart img {
+        height: 140px; /* Tinggi gambar untuk layar lebih kecil */
+    }
+}
+
+@media (max-width: 426px) {
+    #slider {
+        height: 300px; /* Tinggi slider untuk layar lebih kecil */
+    }
+
+    #products h2 {
+        font-size: 18px; /* Ukuran font judul produk untuk layar lebih kecil */
+    }
+
+    .cart {
+        padding: 5px; /* Jarak dalam kotak produk */
+    }
+
+    .cart .category, .cart .title, .cart .price {
+        font-size: 9px; /* Ukuran font untuk kategori, nama produk, dan harga */
+    }
+
+    .cart img {
+        height: 120px; /* Tinggi gambar untuk layar lebih kecil */
+    }
+}

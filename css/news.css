@@ -1,0 +1,120 @@
+/* Teks Utama */
+.teks {
+    text-align: center;
+    margin: 30px auto;
+    font-size: 32px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #FFC3A0 0%, #FFAFBD 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    to {
+        background-position: 400%;
+    }
+}
+
+/* Kontainer Utama */
+#box {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Grid Layout */
+.tam {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card Berita */
+.cart {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform .3s ease, box-shadow .3s ease;
+    height: 100%; /* Pastikan card full tinggi */
+}
+
+.cart:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* Isi Card */
+.card-body {
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Biar isi card isi ruang tersisa */
+}
+
+/* Deskripsi */
+.description {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Batasi 3 baris */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1; /* Biar dorong Learn More ke bawah */
+}
+
+/* Tombol Learn More */
+.read-more {
+    margin-top: auto; /* Selalu tempel di bawah */
+    background: #FF6584;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: background .3s ease;
+}
+
+.read-more:hover {
+    background: #e64c6c;
+}
+
+/* Responsive */
+@media (max-width: 1336px) {
+    .tam {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1030px) {
+    .tam {
+        grid-template-columns: 1fr;
+    }
+    .teks {
+        font-size: 28px;
+    }
+    .gg {
+        height: 180px;
+    }
+}
+
+@media (max-width: 625px) {
+    .teks {
+        font-size: 24px;
+    }
+    .gg {
+        height: 150px;
+    }
+}
